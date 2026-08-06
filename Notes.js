@@ -4,8 +4,10 @@
 // operators --> conditional , mathmatical, logical
 // String & its method
 // Array & its method
-
 // Loops
+// Object & methods 
+
+
 // functions
 // Callback function
 // promises
@@ -255,25 +257,167 @@
 //   }
 
 // Ques --> find the name of products whose price is between 15 to 50 thousand
-let products = [
-    {name:"iphone" , price:44000 , rating:4.5}, // 0
-    {name:"samsung" , price:84000 , rating:5}, //1
-    {name:"MI" , price:14000 , rating:3},  //2
-    {name:"Nokia" , price:24000 , rating:2}, //3
-    {name:"x-box" , price:54000 , rating:1}, //4
-    {name:"realme" , price:4000 , rating:3.5}, //5
-]
+// let products = [
+//     {name:"iphone" , price:44000 , rating:4.5}, // 0
+//     {name:"samsung" , price:84000 , rating:5}, //1
+//     {name:"MI" , price:14000 , rating:3},  //2
+//     {name:"Nokia" , price:24000 , rating:2}, //3
+//     {name:"x-box" , price:54000 , rating:1}, //4
+//     {name:"realme" , price:4000 , rating:3.5}, //5
+// ]
 
-for(let i=0 ; i<products.length ; i++){
-    // console.log(products[i]) //{}
-    if(products[i].price>=15000 && products[i].price<=50000){
-        console.log(products[i].name)
-    }
-}
-
-
+// for(let i=0 ; i<products.length ; i++){
+//     // console.log(products[i]) //{}
+//     if(products[i].price>=15000 && products[i].price<=50000){
+//         console.log(products[i].name)
+//     }
+// }    
 
 
+// let x = 10
+// let y = x
+
+
+    // let  arr = [10 ,20 ,30 , 40 ,50];
+
+    // let ans = [...arr]
+    // // let ans = arr;
+
+    // ans.push(66);
+
+    // console.log(ans) // []
+    // console.log(arr) // []
+
+// Spread Operator --> ...can copy the element of array or object into new array or object
+
+    //  let obj = {
+    //     name:"one",
+    //     email:"one@gmail.com"
+    //  }
+
+    //  let ans = {...obj}
+    //  console.log(ans)
+
+// **************************Object Methods ------------------
+// Add or update or delete value in Object --> 
+//   let obj = {
+//         name:"one",
+//         email:"one@gmail.com"
+//      }
+
+//      obj.course = "fullstack";
+//      obj.email = "john@gmail.com";
+//      obj['age'] = 44
+
+//      delete obj.name
+
+//      console.log(obj) // {name:one , email:"john@gmail.com", course:"fullstack", age:44}
+
+
+// Covert Object into String --> JSON.stringify() and JSON.parse()
+//   let data = {
+//         name:"one",
+//         email:"one@gmail.com"
+//      }
+
+//      let ans = JSON.stringify(data); // String Object
+//      console.log(ans)
+//      console.log(ans[0])
+//      console.log(typeof ans)
+
+
+// // convert string obect back into real Object --> JSON.parse()
+
+//      let ans2 = JSON.parse(ans);
+//      console.log(ans2)
 
 
 
+// Destructuring ->
+
+    //   let data = {
+    //     name:"one",
+    //     email:"one@gmail.com"
+    //  }
+
+    //  let a = data.name
+    //  let b = data.email;
+
+    //  let {name, email} = data  // destructuring
+    //  console.log(name)
+    //  console.log(email)
+
+    //  let array = [10, 20, 30, 40, 50, 60];
+    //  let [a,b,c,d,e,f]  = array // destructuring
+
+
+
+
+// Function --> a block of code used to run  a specific task . with the help of function you can reuse your code. a functions run only when something invokes it or calls it
+
+
+    // function xyz(a ,b){  //a and b are parameters
+    //     // console.log("hello")
+    //     // console.log(a)
+    //     // console.log(b)
+    //     console.log(a+b)
+    //     console.log(a*b)
+    // }
+
+    // xyz(10 , 12) // 10 and 20 are arguments 
+    // xyz(1 , 2) // 10 and 20 are arguments 
+    // xyz(4 , 5) // 10 and 20 are arguments 
+
+    // // console.log(xyz) //
+
+    // let x = function(){ // anonymous function(that do not have any name)
+    //     console.log("all is well")
+    // }
+
+    // x()
+
+    // // Arrow Function --> introduced in ES6
+
+    // let y = ()=>{
+    //     console.log("i am arrow function")
+    // }
+    // y()
+
+
+
+
+    // CallBack --> functions that are passed into another function as an argument are known as cb function
+    // function one(){
+    //     console.log("i am one")
+    // }
+    // function two(a,b,c,d,e){
+    //     console.log(a) //10
+    //     console.log(b) //"hello"
+    //     console.log(c) //[10, 20, 30]
+    //     console.log(d) //{name:"one"}
+    //     e()
+    // }
+    // two(10 , "hello" , [10, 20, 30] , {name:"one"} , one) //one is cb function
+
+
+
+
+// Timer function --> setTimeOut() , setInterval()
+
+// Syntax --> setInterval(cbFunction , time in ms)
+
+// let count = 0
+// function one(){
+//     count = count+1
+//     console.log("all is well "+count)
+// }
+
+// setInterval( one , 2000)
+
+// setInterval (function(){
+//     console.log("all good")
+// }  , 2000)
+
+// setInterval (()=>{
+//     console.log("this is arrow function")
+// }, 2000)
