@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <div>
+        <h1 id="demo">This is first heading</h1>
+
+        <ul class="ulList">
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Kiwi</li>
+        </ul>
+
+        <ul class="ulList">
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Kiwi</li>
+        </ul>
+        <ul class="ulList">
+            <li>Mango</li>
+            <li>Apple</li>
+            <li>Kiwi</li>
+        </ul>
+    </div>
+    <script>
+        // DOM --> it is a tree like structure created by the Browser. with the help of DOM javascript get all the power it need to create a dynamic webpage.
+
+        // with the help of DOM you can create a new tag
+        // with the help of DOM you can change or manipulate a html tag
+        // can change attributeb of any tag
+        // with the help of DOM you can write css etc
+
+
+        // example -->
+        // document.getElementById('demo').style.color = "red"
+
+        // Get any Tag or element in javascript --> 
+        // 1) document.getElementById()
+        // 2) document.getElementByClassName()
+        // 3) document.getElementByName()
+        // 4) document.getElementByTagName()
+        // 5) document.querySelector()
+        // 6) document.querySelectorAll()
+
+         // 1) document.getElementById() --> 
+        //  let x = document.getElementById('demo'); //<h1 id="demo">This is first heading</h1>
+        //  //  You can write inside tag using  --> .innerHTML, .innerText, .textContent
+        //  // you can write Css using --> .style.color(property)
+        // //  after getting tag we can set and get any attribute value using (.dot) for example --> 
+        //  x.className = "abc" // this will add class attribute to that tag
+        //  x.innerHTML = "hello this is new text"
+        //  x.style.border = "1px solid blue"
+        //  x.style.padding = " 30px"
+        //  console.log(x)
+
+
+
+        // // 2) document.getElementByClassName()-->
+
+        let x = document.getElementsByClassName('ulList');
+        // console.log(x) //[ul , ul , ul];
+        // console.log(x[0]) // ul
+        // x[0].style.backgroundColor = "green"
+        // x[1].style.backgroundColor = "green"
+        // x[2].style.backgroundColor = "green"
+
+        for(let i= 0 ; i<=x.length-1 ; i++){
+            // console.log(x[i])
+            x[i].style.backgroundColor = "Red"
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

@@ -6,13 +6,15 @@
 // Array & its method
 // Loops
 // Object & methods 
-
-
 // functions
 // Callback function
+
 // promises
 // Async await
 // DOM
+// project
+// local Storage
+
 
 
 // Javascript --> used to write logic and functinality to a web page. with the help of js you can create dynamic website. first name of js was MOCHA. later it was name as Live script. currently it is named as ECHMA script. current version of js is (ES6)
@@ -421,3 +423,78 @@
 // setInterval (()=>{
 //     console.log("this is arrow function")
 // }, 2000)
+
+
+
+// 
+
+
+// console.log("one")
+// console.log("two")
+// console.log("three")
+
+// setTimeout(()=>{
+//     console.log("dukaan pr gye")
+// } , 4000)
+
+// setTimeout(()=>{
+//     console.log("cold drink khareed li")
+// } , 1000)
+
+// setTimeout(()=>{
+//     console.log("ghar waps aa jana")
+// } , 3000)
+
+// console.log('coldrink pee li')
+
+// Promises --> are Objects and used to handle asynchronous task in javascript. it take a callback function with two arguments resolve and reject. if promise is fullfilled you can get the resolved output in (.then) part if promise is rejected you can get your rejected output in (.catch) part.  promises have three states pending fullfilled , and rejected.
+
+// Syntax -->  let variableName =  newPromise((resolve, reject)=>{
+                                        //resolve()  or reject()
+                                    // })
+
+
+        
+// let x = new Promise((resolve, reject) => {
+
+//     reject("hello i am resolved promise")
+// })
+
+// x.then((ans)=>console.log(ans))
+// .catch((ans)=>console.log(ans))
+// .then(()=>console.log("i am two"));
+
+// console.log("i am two")
+
+
+// console.log(x)  // --> x is a promise
+
+
+// fetch --> used to send hhtp network request to server . it return a promise
+
+
+// let res = fetch('API')
+// let res = fetch('https://dummyjson.com/products')
+// res.then((ans) =>ans.json()).then((ans)=>console.log(ans))
+// .catch((ans)=>console.log(ans))
+
+
+// async function xyz(){
+//         let res = await fetch('https://dummyjson.com/products')
+//         let data = await res.json();
+//         console.log(data) //{}
+//         console.log(data.products) //{}
+// }
+
+// xyz();
+
+
+// document.write(<h1>hello</h1>)
+
+
+
+
+
+
+
+
