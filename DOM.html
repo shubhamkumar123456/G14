@@ -31,6 +31,16 @@
             <li>Kiwi</li>
         </ul>
     </div>
+
+    <p name="one">This is  dummy text</p>
+
+
+    <label for="">male</label>
+    <input name="a" type="radio">
+    <label for="">Female</label>
+    <input  name="a" type="radio">
+
+
     <script>
         // DOM --> it is a tree like structure created by the Browser. with the help of DOM javascript get all the power it need to create a dynamic webpage.
 
@@ -44,11 +54,11 @@
         // document.getElementById('demo').style.color = "red"
 
         // Get any Tag or element in javascript --> 
-        // 1) document.getElementById()
-        // 2) document.getElementByClassName()
-        // 3) document.getElementByName()
-        // 4) document.getElementByTagName()
-        // 5) document.querySelector()
+        // 1) document.getElementById() --> gives direct tag
+        // 2) document.getElementByClassName() --> gives array
+        // 3) document.getElementByName() --> gives array
+        // 4) document.getElementByTagName() --> gives []
+        // 5) document.querySelector() --> gives single tag first occurence
         // 6) document.querySelectorAll()
 
          // 1) document.getElementById() --> 
@@ -66,20 +76,41 @@
 
         // // 2) document.getElementByClassName()-->
 
-        let x = document.getElementsByClassName('ulList');
-        // console.log(x) //[ul , ul , ul];
-        // console.log(x[0]) // ul
-        // x[0].style.backgroundColor = "green"
-        // x[1].style.backgroundColor = "green"
-        // x[2].style.backgroundColor = "green"
+        // let x = document.getElementsByClassName('ulList');
+        // // console.log(x) //[ul , ul , ul];
+        // // console.log(x[0]) // ul
+        // // x[0].style.backgroundColor = "green"
+        // // x[1].style.backgroundColor = "green"
+        // // x[2].style.backgroundColor = "green"
 
-        for(let i= 0 ; i<=x.length-1 ; i++){
-            // console.log(x[i])
-            x[i].style.backgroundColor = "Red"
-        }
+        // for(let i= 0 ; i<=x.length-1 ; i++){
+        //     // console.log(x[i])
+        //     x[i].style.backgroundColor = "Red"
+        // }
+
+
+         // 3) document.getElementByName() -->
+        //  let x = document.getElementsByName('one')//
+        //  console.log(x) //[p]
+        //  console.log(x[0]) //<p>  <p>
+            // x[0].innerHTML = "hiii"
 
 
 
+        // query Selector --> 
+        // let x = document.querySelector('#demo')
+        // console.log(x)
+
+        let x = document.querySelectorAll('.ulList')
+        console.log(x)
+        console.log(x[0])
+        console.log(x[1])
+        console.log(x[2])
+        console.log(x[2].children) //[li , li, li]
+        x[2].children[1].style.backgroundColor = "blue"
+
+
+        //Event -->  
     </script>
     
 </body>
