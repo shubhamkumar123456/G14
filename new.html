@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        div{
+            /* background-color: aqua; */
+            border: 1px solid;
+            padding: 20px;
+            display: flex;
+            width: 500px;
+            margin: auto;
+            /* gap: 50px; */
+            justify-content: space-between;
+        }
+
+        span{
+            background-color: red;
+            width: 500px;
+        }
+        /* p{
+            background-color: green;
+            width: 200px;
+        } */
+    </style>
+</head>
+<body>
+
+      <form action="">
+        <label for="">Name</label>
+        <input id="name" type="text" placeholder="enter your name"> <br>
+
+        <label for="">Age</label>
+        <input id="age" type="number" placeholder="enter your name"> <br>
+
+        <select name="" id="course">
+            <option value="">Please Select a course</option>
+            <option value="frontend">Frontend</option>
+            <option value="backend">backend</option>
+            <option value="fullstack">Fullstack</option>
+        </select> <br>
+        <button onclick="handleForm(event)">Submit</button>
+      </form>
+   
+    <script>
+
+       
+        let arr = [
+            {name:"one" , age:33 , course:"fullstack"},
+            {name:"two" , age:34 , course:"frontend"},
+            {name:"three" , age:35 , course:"backend"},
+            {name:"four" , age:36 , course:"backend"},
+            {name:"five" , age:37 , course:"fullstack"},
+        ]
+        let bodyTag = document.querySelector('body');
+
+       function showData(){
+         for(let i = 0 ; i<=arr.length-1 ; i++){
+            // console.log(arr[i])  // {}
+            let container = document.createElement('div')
+            let p1 = document.createElement('p')  //<p>  <p>
+            let p2 = document.createElement('p')  //<p>  <p>
+            let p3 = document.createElement('p')  //<p>  <p>
+
+                p1.innerHTML = arr[i].name;
+                p2.innerHTML = arr[i].age;
+                p3.innerHTML = arr[i].course;
+                container.append(p1, p2 ,p3)
+                bodyTag.append(container)
+        }
+
+       }
+       showData()
+ let nameTag = document.getElementById('name')
+        let ageTag = document.getElementById('age')
+        let courseTag = document.getElementById('course')
+
+       function handleForm(e){
+        e.preventDefault();
+        // console.log("working")
+        let obj = {
+            name:nameTag.value,
+            age:ageTag.value,
+            course:courseTag.value  
+        }
+        console.log(obj)
+       }
+
+    </script>
+</body>
+</html>
