@@ -17,6 +17,10 @@
             justify-content: space-between;
         }
 
+        .box{
+            display: block;
+        }
+
         span{
             background-color: red;
             width: 500px;
@@ -28,6 +32,10 @@
     </style>
 </head>
 <body>
+
+    <div class="box">
+
+    </div>
 
       <form action="">
         <label for="">Name</label>
@@ -55,9 +63,10 @@
             {name:"four" , age:36 , course:"backend"},
             {name:"five" , age:37 , course:"fullstack"},
         ]
-        let bodyTag = document.querySelector('body');
+        let bodyTag = document.querySelector('.box');
 
        function showData(){
+            bodyTag.innerHTML = "";
          for(let i = 0 ; i<=arr.length-1 ; i++){
             // console.log(arr[i])  // {}
             let container = document.createElement('div')
@@ -74,6 +83,7 @@
 
        }
        showData()
+
  let nameTag = document.getElementById('name')
         let ageTag = document.getElementById('age')
         let courseTag = document.getElementById('course')
@@ -87,6 +97,8 @@
             course:courseTag.value  
         }
         console.log(obj)
+        arr.push(obj)
+         showData();
        }
 
     </script>
