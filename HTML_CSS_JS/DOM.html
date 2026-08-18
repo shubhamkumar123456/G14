@@ -101,17 +101,43 @@
         // let x = document.querySelector('#demo')
         // console.log(x)
 
-        let x = document.querySelectorAll('.ulList')
-        console.log(x)
-        console.log(x[0])
-        console.log(x[1])
-        console.log(x[2])
-        console.log(x[2].children) //[li , li, li]
-        x[2].children[1].style.backgroundColor = "blue"
+        // let x = document.querySelectorAll('.ulList')
+        // console.log(x)
+        // console.log(x[0])
+        // console.log(x[1])
+        // console.log(x[2])
+        // console.log(x[2].children) //[li , li, li]
+        // x[2].children[1].style.backgroundColor = "blue"
 
 
         //Event -->  
-    </script>
+
+        // LocalStorage --> space in Browser --> localstorage, cookies, sessionStorage
+
+        //1) saVE DATa on localStorage -->
+        //  localstorage.setItem(key , value)
+        // localStorage.getItem(key);
+        // localStorage.removeItem(key)
+            
+        // let x = 10;
+        // localStorage.setItem('data' ,x )
+
+
+        // let ans = localStorage.getItem('data')
+        // console.log(ans)
+
+
+        let arr  = [{name:"one" , age:22} , {name:"two" , age:66}]
+            // localStorage.setItem('trial' ,arr )
+        
+            localStorage.setItem('trial', JSON.stringify(arr))
+
+
+            let ans = JSON.parse(localStorage.getItem('trial'));
+            console.log(ans)
+
+        
+        </script>
     
 </body>
 </html>
