@@ -3,6 +3,7 @@
 import React from 'react'
 import Demo from './Demo'
 import Counter from './Counter'
+import ShowData from './ShowData'
 
 function App() {
   return (
@@ -11,7 +12,12 @@ function App() {
       <Demo/>
       <Demo/> */}
 
-      <Counter/>
+      {/* <Counter/>
+      <h1>THis is app</h1>
+
+      <ShowData/>
+      <ShowData/> */}
+      <ShowData/>
    
     </div>
   )
