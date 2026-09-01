@@ -18,6 +18,8 @@
 
 // Virtual DOM --> it is a copy of actual DOM (memory representation of actual DOM). whenever any components state or props changes it creates a new Virtual DOM tree and then compare it to the previous tree and then apply minimum set to changes require in actual DOM.
 
+//props --> with the help of props you can pass data from parent component to child component
+
 
 
 

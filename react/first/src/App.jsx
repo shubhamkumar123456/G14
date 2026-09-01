@@ -4,21 +4,12 @@ import React from 'react'
 import Demo from './Demo'
 import Counter from './Counter'
 import ShowData from './ShowData'
+import Component1 from './Component1'
 
 function App() {
   return (
     <div>
-      {/* <h1>THis is app component</h1>
-      <Demo/>
-      <Demo/> */}
-
-      {/* <Counter/>
-      <h1>THis is app</h1>
-
-      <ShowData/>
-      <ShowData/> */}
-      <ShowData/>
-   
+        <Component1/>
     </div>
   )
 }
