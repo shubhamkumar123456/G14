@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+            animation: move 3s linear forwards;
+        }
+        @keyframes move{
+            0%{
+                transform: translateX(0) rotate(0) scale(1);
+            }
+            50%{
+                transform: translateX(600px) rotate(360deg) scale(1.8);
+            }
+            100%{
+                transform: translate(600px , 400px) rotate(-360deg) scale(1);
+            }
+        }
+        body{
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
