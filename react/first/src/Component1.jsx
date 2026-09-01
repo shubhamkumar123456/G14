@@ -1,7 +1,8 @@
 import React from 'react'
 import ChildComponent from './ChildComponent'
 
-const Component1 = () => {
+const Component1 = (props) => {
+    
      let x = 10;
   return (
     <div style={{backgroundColor:"brown",padding:"30px"}}>

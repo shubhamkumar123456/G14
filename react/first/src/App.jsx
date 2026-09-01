@@ -9,7 +9,7 @@ import Component1 from './Component1'
 function App() {
   return (
     <div>
-        <Component1/>
+        <Component1 data = {"hello this is dummy text"}/>
     </div>
   )
 }
