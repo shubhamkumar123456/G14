@@ -4,6 +4,7 @@ import Contact from './pages/Contact'
 import Navbar from './components/Navbar'
 
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import ConditionalPage from './pages/ConditionalPage'
 
 
 export function Home(){
@@ -31,6 +32,7 @@ function App() {
               <Route path='/'  element={<Home/>}/>
               <Route path='/about' element={<About a={x} b={"hello"}/>}/>
               <Route path='/xyz' element={<Contact/>}/>
+              <Route path='/condition' element={<ConditionalPage/>}/>
           </Routes>
       </BrowserRouter>
     </div>

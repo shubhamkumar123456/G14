@@ -21,6 +21,7 @@
 //props --> with the help of props you can pass data from parent component to child component
 
 
+// Conditional Rendering --> using && operator  and using ternary operator
 
 
 
