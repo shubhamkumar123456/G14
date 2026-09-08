@@ -5,6 +5,7 @@ import Navbar from './components/Navbar'
 
 import {BrowserRouter , Routes , Route} from 'react-router-dom'
 import ConditionalPage from './pages/ConditionalPage'
+import TryEffect from './pages/TryEffect'
 
 
 export function Home(){
@@ -33,6 +34,7 @@ function App() {
               <Route path='/about' element={<About a={x} b={"hello"}/>}/>
               <Route path='/xyz' element={<Contact/>}/>
               <Route path='/condition' element={<ConditionalPage/>}/>
+              <Route path="/effect"  element={<TryEffect/>} />
           </Routes>
       </BrowserRouter>
     </div>

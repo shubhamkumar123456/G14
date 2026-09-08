@@ -8,7 +8,8 @@ const Navbar = () => {
             <li><Link to={'/'}>Home</Link></li>
             <li><Link to={'/about'}>About</Link></li>
             <li><Link to={'/xyz'}>Contact</Link></li>
-            <li><Link to={'/condition'}>Conditional</Link></li>
+            <li><Link to={'/condition'}>Conditional</Link></li> 
+            <li><Link to={'/effect'}>Use Effect</Link></li> 
         </ul>
     </div>
   )
