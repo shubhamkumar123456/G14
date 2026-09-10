@@ -11,6 +11,7 @@ const TryEffect = () => {
             }
     } , [])
 
+
     console.log(count);//0
 
     function handleIncrement(){

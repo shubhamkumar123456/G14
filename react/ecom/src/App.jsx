@@ -3,15 +3,15 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Home from './pages/Home'
+import Cart from './pages/Cart'
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  
   return (
     <>
-
-        <h1>This is App Component</h1>
-    
+        <Home/>
+        <Cart/>
     </>
   )
 }
