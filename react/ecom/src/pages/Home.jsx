@@ -32,6 +32,8 @@ const Home = () => {
                 <p>{val.title}</p>
                 <p>{val.price}</p>
                 <button className='bg-black cursor-pointer hover:bg-[#202020] text-white px-5 py-4 w-full rounded-2xl'>Add to Cart</button>
+                
+                <button className='bg-blue-950 cursor-pointer hover:bg-blue-800 text-white px-5 py-4 w-full rounded-2xl'>View Product</button>
             </div>
         })}
       </div>
