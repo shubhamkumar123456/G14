@@ -1,5 +1,11 @@
 // Commands --> 
 // a) install or create new react app --> npm create vite@latest
+        // --give  projectName(example--> ecom, project1 etc)
+        // --select react framework
+        // -- select javascript variant
+        // -- select ES Lint
+        // -- select yes
+
 // b) run react project --> npm run dev
 // c) change directory(folder using terminal) --> cd foldername or cd..
 // d) install any third party module or package  --> npm i packageName
@@ -23,12 +29,14 @@
 
 // Conditional Rendering --> using && operator  and using ternary operator
 
-// React routings --> using react-router-dom
+// React routings --> using react-router-dom(BrowserRouter, Routes, Route, Link)
 
 // useState Hook --> used to store value and can be used to re-render of component. it take a array of two arguments a variable and a function. with the help of function we can update or replace the value of variable. whenever the update function will run react re-renders the whole component
 // example-->  const [data , setData ] = useState(10);
 
 // useEffect Hook --> useEffect hook is used to run side effect such as updating the Dom  element , fething Api etc. it takes two arguments , a callback function and a array of dependency. if array of dependency is blank useEffect will run only one time. useEffect always run after the first render of component
+
+// 
 
 
 

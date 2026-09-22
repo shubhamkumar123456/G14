@@ -22,16 +22,16 @@ const Home = () => {
     
 
   return (
-    <div>
-      <h1>This is Home Page</h1>
+    <div className='bg-amber-950 text-white'>
+      <h1 className=' text-white h-[60px]'>This is Home Page</h1>
 
-      <div>
+      <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
         {productsArr.map((val , i)=>{
-            return <div>
+            return <div className='border flex flex-col items-center gap-3 p-10'>
                 <img src={val.thumbnail} alt="" />
                 <p>{val.title}</p>
                 <p>{val.price}</p>
-                <button>Add to Cart</button>
+                <button className='bg-black cursor-pointer hover:bg-[#202020] text-white px-5 py-4 w-full rounded-2xl'>Add to Cart</button>
             </div>
         })}
       </div>
