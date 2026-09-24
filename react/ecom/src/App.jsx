@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import Cart from './pages/Cart'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ViewDeatils from './pages/ViewDeatils'
+import Navbar from './components/Navbar'
 
 function App() {
   
@@ -16,6 +17,9 @@ function App() {
         <Cart/> */}
 
         <BrowserRouter>
+          <div className='h-[60px]'>
+             <Navbar/>
+          </div>
           <Routes>
               <Route path="/" element={<Home/>}/>
               <Route path='/abc' element={<Cart/>}/>
