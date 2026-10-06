@@ -13,6 +13,10 @@ const ViewDeatils = () => {
       <div className='border justify-center rounded-3xl items-center flex lg:flex-row flex-col gap-10 p-20 w-[80%] mx-auto'>
         <div>
           <img className='min-w-[350px]' src={product.thumbnail} alt="" />
+
+            <div>
+              
+            </div>
         </div>
 
         <div className='flex flex-col gap-4 text-xl'>

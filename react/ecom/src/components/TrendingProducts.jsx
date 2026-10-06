@@ -21,8 +21,8 @@ const TrendingProducts = (props) => {
         {
             props.data.map((ele,i)=>{
                 return <SwiperSlide>
-                        <img src={ele.thumbnail} alt="" />
-                        <p>{ele.title}</p>
+                        <img className='mx-auto' src={ele.thumbnail} alt="" />
+                        <p className='text-center'>{ele.title}</p>
                 </SwiperSlide>
             })
         }

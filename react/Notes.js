@@ -36,7 +36,9 @@
 
 // useEffect Hook --> useEffect hook is used to run side effect such as updating the Dom  element , fething Api etc. it takes two arguments , a callback function and a array of dependency. if array of dependency is blank useEffect will run only one time. useEffect always run after the first render of component
 
-// 
+//context api --> with the help of contex api you can define global state in your react application. data can be shared between any component in react. with the help of context api you can avoid props drilling
+
+
 
 
 
