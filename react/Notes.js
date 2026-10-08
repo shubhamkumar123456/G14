@@ -40,7 +40,7 @@
 
 
 
-
+// UseReducer Hook --> it is an alternative to useState Hook designed for managing complex state logic. it follows reduc pattern: you send an action via dispatch , and pure reducer function calculates the next state
 
 
 
