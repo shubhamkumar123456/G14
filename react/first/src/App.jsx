@@ -5,11 +5,13 @@ import Demo from './Demo'
 import Counter from './Counter'
 import ShowData from './ShowData'
 import Component1 from './Component1'
+import ReducerHookPractice from './ReducerHookPractice'
 
 function App() {
   return (
     <div>
-        <Component1 data = {"hello this is dummy text"}/>
+        {/* <Component1 data = {"hello this is dummy text"}/> */}
+          <ReducerHookPractice/>
     </div>
   )
 }
