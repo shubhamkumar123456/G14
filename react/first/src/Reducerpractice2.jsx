@@ -7,6 +7,9 @@ const Reducerpractice2 = () => {
             let copyObj = {...state , count: state.count+1}
             return  copyObj
         }
+        if(action.task === "updateName"){
+                   return {...state , data:{...state.data, name:action.val}}
+        }
     }
     const [state , disptach ] = useReducer( reducers  , {
         data:{name:"john", email:"john@gmail.com"},
@@ -26,7 +29,7 @@ const Reducerpractice2 = () => {
 
 
         <button onClick={handleIncrement}>Update Count</button>
-        <button>Update Name</button>
+        <button onClick={()=>disptach({task:"updateName" , val:"Nick"})}>Update Name</button>
         <button>Update Email</button>
     </div>
   )

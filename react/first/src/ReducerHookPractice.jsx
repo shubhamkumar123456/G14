@@ -20,6 +20,7 @@ const ReducerHookPractice = () => {
         // console.log("running")
         // setCount("hello");
         setCount(count+1);
+        
     }
 
     function handleIncrementReducer(){
