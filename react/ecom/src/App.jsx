@@ -8,7 +8,9 @@ import Cart from './pages/Cart'
 import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import ViewDeatils from './pages/ViewDeatils'
 import Navbar from './components/Navbar'
-
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import ProtectedRoute from './components/ProtectedRoute'
 function App() {
   
   return (
@@ -21,9 +23,19 @@ function App() {
              <Navbar/>
           </div>
           <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path='/abc' element={<Cart/>}/>
-              <Route path='/view' element={<ViewDeatils/>}/>
+              <Route path="/" element= {<ProtectedRoute>
+                <Home/>
+                </ProtectedRoute>}/>
+
+              <Route path='/abc' element={<ProtectedRoute>
+                <Cart/>
+              </ProtectedRoute>}/>
+              <Route path='/view' element={<ProtectedRoute>
+                <ViewDeatils/>
+              </ProtectedRoute>}/>
+              
+              <Route path='/login' element={<Login/>}/>
+              <Route path='/register' element={<Signup/>}/>
           </Routes>
         </BrowserRouter>
     </>

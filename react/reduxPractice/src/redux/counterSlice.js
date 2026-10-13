@@ -5,7 +5,8 @@ export const counterSlice = createSlice({
   initialState: {
     value: 0,
     arr:[10, 20, 30, 40],
-    user:{name:"one", email:"one@gmail.com"}
+    user:{name:"one", email:"one@gmail.com"},
+   
   },
   reducers: {
     changeNamer:(state ,action)=>{
