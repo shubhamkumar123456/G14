@@ -3,20 +3,34 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import TrendingProducts from '../components/TrendingProducts';
 import { Link } from 'react-router-dom';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
 const Home = () => {
 
     const[productsArr , setProductsArr] = useState([]);
+    const[slicedArr , setSlicedArr] = useState([]);
+    const [skip, setskip] = useState(0);
+    const [hasMore, sethasMore] = useState(true);
+    
+    const limit = 10
     console.log(productsArr); // [{}, {}, {}....194]
 
    async function getData(){
-        let res =await fetch('https://dummyjson.com/products?skip=0&limit=0'); 
-        let data = await res.json();
+        if(slicedArr.length ==0){
+          let res =await fetch('https://dummyjson.com/products?skip=0&limit=0'); 
+          let data = await res.json();
         // console.log(data); //{}
         // console.log(data.products) //[{}, {}, {}...30]
-        setProductsArr(data.products)
+          setProductsArr(data.products)  //[{}, {}, {}...194]
+          setSlicedArr(data.products.slice(skip, limit));
+          setskip(limit)
+        }
+        else{ 
+              
+            setSlicedArr([...slicedArr ,...productsArr.slice(skip , skip+limit)])
+            setskip(skip + limit)
+        }
     }
-
 
     let laptops = productsArr.filter((val)=>val.category==="laptops")//[{},{}..5]
     let smartPhones = productsArr.filter((val)=>val.category==="smartphones")//[{}...16]
@@ -40,12 +54,19 @@ const Home = () => {
       </div>
 
       <div className='my-10 bg-black text-white p-5'>
-        <h1 className='font-bold text-2xl'>Laptops</h1>
+        <h1 className='font-bold text-2xl'>Smartphones</h1>
         <TrendingProducts data = {smartPhones}/>
       </div>
 
-      <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
-        {productsArr.map((val , i)=>{
+      <InfiniteScroll
+        dataLength={slicedArr.length}
+      next={getData}
+      hasMore={hasMore}
+      loader={<p>Loading...</p>}
+      endMessage={<p style={{ textAlign: 'center' }}>All items loaded.</p>}
+      className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3'>
+
+        {slicedArr.map((val , i)=>{
             return <div key={val.id} className='border flex flex-col items-center gap-3 p-10'>
                 <img src={val.thumbnail} alt="" />
                 <p className='text-black font-semibold text-xl'>{val.title}</p>
@@ -55,7 +76,7 @@ const Home = () => {
                 <Link state={val} to={'/view'} className='bg-blue-950 text-center cursor-pointer hover:bg-blue-800 text-white px-5 py-4 w-full rounded-2xl'>View Product</Link>
             </div>
         })}
-      </div>
+      </InfiniteScroll>
     </div>
   )
 }
